@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap");
+
+.active {
+  color: white;
+  font-size: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: JetBrains Mono;
+  font-weight: 700;
+}
+
+.inactive {
+  color: rgb(131, 131, 131);
+  font-size: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: JetBrains Mono;
+  font-weight: 300;
+}
+
+.inactive:hover {
+  color: #0d6fca;
+}
