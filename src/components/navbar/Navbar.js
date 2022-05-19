@@ -19,5 +19,5 @@ function useWindowSize() {
 export default function Navbar() {
   // eslint-disable-next-line
   const [height, width] = useWindowSize();
-  return <>{width < 925 ? <NavbarMobile /> : <NavbarDesktop />}</>;
+  return <>{width < 1070 ? <NavbarMobile /> : <NavbarDesktop />}</>;
 }

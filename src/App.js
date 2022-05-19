@@ -1,3 +1,4 @@
+import { useColorMode } from "@chakra-ui/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import About from "./pages/About";
@@ -6,9 +7,13 @@ import Donations from "./pages/Donations";
 import Events from "./pages/Events";
 import History from "./pages/History";
 import Home from "./pages/Home";
+import PageNotFound from "./pages/PageNotFound";
 import Team from "./pages/Team";
 
 function App() {
+  const { toggleColorMode } = useColorMode();
+  toggleColorMode();
+
   return (
     <BrowserRouter>
       <Navbar />
@@ -20,6 +25,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/donations" element={<Donations />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
