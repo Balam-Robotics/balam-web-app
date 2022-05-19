@@ -1,0 +1,26 @@
+.container {
+  max-width: 600px;
+  min-width: 200px;
+  display: grid;
+}
+
+.container-shield:first-of-type {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.container-gear:last-of-type {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.container-shield {
+  margin-left: 13.5%;
+  margin-right: 13.5%;
+  margin-top: 13.5%;
+  margin-bottom: 13.5%;
+}
+
+.container-gear {
+  animation: spin 18s infinite linear;
+}

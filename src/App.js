@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 import Donations from "./pages/Donations";
 import Events from "./pages/Events";
 import History from "./pages/History";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import PageNotFound from "./pages/PageNotFound";
 import Team from "./pages/Team";
 
