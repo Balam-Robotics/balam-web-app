@@ -1,23 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap");
 
+.LogoGear {
+  animation: spin 7s linear infinite;
+  -webkit-animation: spin 7s linear infinite;
+  -moz-animation: spin 7s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 .active {
-  color: white;
-  font-size: 17px;
+  color: rgb(101, 207, 229);
+  font-size: 16px;
   padding-left: 10px;
   padding-right: 10px;
   font-family: JetBrains Mono;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .inactive {
-  color: rgb(131, 131, 131);
-  font-size: 17px;
+  color: white;
+  font-size: 16px;
   padding-left: 10px;
   padding-right: 10px;
   font-family: JetBrains Mono;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .inactive:hover {
-  color: #0d6fca;
+  color: rgb(101, 207, 229);
 }
