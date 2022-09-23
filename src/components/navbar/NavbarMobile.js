@@ -150,6 +150,17 @@ export default function NavbarMobile() {
                 >
                   ¡Contáctanos!
                 </NavLink>
+                <Button
+                  icon={<BsInstagram />}
+                  colorScheme="teal"
+                  variant="outline"
+                  size="sm"
+                  onClick={() =>
+                    openInNewTab("https://www.instagram.com/balam_3527/")
+                  }
+                >
+                  ¡Rifa Balam 2022!
+                </Button>
               </VStack>
               <VStack>
                 <HStack>

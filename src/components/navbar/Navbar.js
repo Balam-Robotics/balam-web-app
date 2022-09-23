@@ -43,7 +43,7 @@ export default function Navbar() {
     <>
       <Box>
         {isVisible ? (
-          <Alert status="warning" variant="solid">
+          <Alert status="success" variant="solid">
             <Flex
               alignItems="center"
               width="100%"
@@ -51,10 +51,10 @@ export default function Navbar() {
             >
               <HStack>
                 <AlertIcon />
-                <AlertTitle>¡Atención!</AlertTitle>
                 <AlertDescription>
-                  Esta es una versión preliminar de la aplicación que solo está
-                  prevista para pruebas.
+                  ¡Participa y prueba tu suerte en la rifa Balam 2022! Hazte de
+                  lo último en tecnología y gana dispositivos, dispositivo,
+                  dispositivo.
                 </AlertDescription>
               </HStack>
               <HStack>
@@ -74,7 +74,7 @@ export default function Navbar() {
         )}
       </Box>
 
-      {width < 920 ? <NavbarMobile /> : <NavbarDesktop />}
+      {width < 1080 ? <NavbarMobile /> : <NavbarDesktop />}
     </>
   );
 }

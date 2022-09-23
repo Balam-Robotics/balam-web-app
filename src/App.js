@@ -9,6 +9,7 @@ import History from "./pages/History";
 import Home from "./pages/home/Home";
 import PageNotFound from "./pages/PageNotFound";
 import Team from "./pages/Team";
+import Raffle from "./pages/Raffle";
 
 function App() {
   const { toggleColorMode } = useColorMode();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/donations" element={<Donations />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/raffle" element={<Raffle />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
