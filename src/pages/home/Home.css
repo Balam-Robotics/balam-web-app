@@ -1,5 +1,7 @@
 .grid-container {
   display: grid;
+  padding-top: 15px;
+  background-color: #242c3c;
 }
 
 .header {
@@ -10,16 +12,31 @@
 
 .header-heading {
   font-family: co-text;
-  /* font-size: min(max(25px, 6vw), 100px); */
+  font-size: 45px;
+  font-weight: 800;
 }
 
 .header-subtitle {
   font-family: co-text;
+  text-align: center;
   font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .balam-logo-image-container {
-  max-width: 200px;
+  max-width: 300px;
   width: 500px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 30px 10px;
+}
+
+.aboutus-text {
+  margin-top: 30px;
+  font-family: co-text;
+  font-size: 20px;
+  text-align: center;
+  padding-right: clamp(1.5rem, 2.5vw, 5rem);
+  padding-left: clamp(1.5rem, 2.5vw, 5rem);
 }

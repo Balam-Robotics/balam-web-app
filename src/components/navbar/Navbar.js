@@ -9,11 +9,14 @@ import {
   IconButton,
   Flex,
   HStack,
+  Button,
+  LightMode,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 import { VscClose } from "react-icons/vsc";
+import { NavLink } from "react-router-dom";
 
 function useWindowSize() {
   const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
@@ -53,9 +56,16 @@ export default function Navbar() {
                 <AlertIcon />
                 <AlertDescription>
                   ¡Participa y prueba tu suerte en la rifa Balam 2022! Hazte de
-                  lo último en tecnología y gana dispositivos, dispositivo,
-                  dispositivo.
+                  lo último en tecnología y ganate in iPad Air, unos Airpods,
+                  una cámara y más.
                 </AlertDescription>
+                <NavLink to={"/raffle"} onClick={onClose}>
+                  <LightMode>
+                    <Button colorScheme="blue" variant="link" size="sm">
+                      Ver más
+                    </Button>
+                  </LightMode>
+                </NavLink>
               </HStack>
               <HStack>
                 <IconButton

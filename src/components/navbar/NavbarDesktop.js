@@ -83,17 +83,16 @@ export default function NavbarDesktopNew() {
           >
             ¡Contáctanos!
           </NavLink>
-          <Button
-            icon={<BsInstagram />}
-            colorScheme="teal"
-            variant="outline"
-            size="sm"
-            onClick={() =>
-              openInNewTab("https://www.instagram.com/balam_3527/")
-            }
-          >
-            ¡Rifa Balam 2022!
-          </Button>
+          <NavLink to={"/raffle"}>
+            <Button
+              icon={<BsInstagram />}
+              colorScheme="teal"
+              variant="outline"
+              size="sm"
+            >
+              ¡Rifa Balam 2022!
+            </Button>
+          </NavLink>
         </HStack>
       </HStack>
       <HStack spacing="10px" marginRight="15px">
