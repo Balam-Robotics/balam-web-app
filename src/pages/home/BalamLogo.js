@@ -8,10 +8,10 @@ export default function BalamLogo() {
   return (
     <Box className="container">
       <Box className="container-shield">
-        <Image src={BalamShield} />
+        <Image src={BalamShield} pointerEvents="none" userSelect={"none"} />
       </Box>
       <Box className="container-gear">
-        <Image src={BalamGear} />
+        <Image src={BalamGear} pointerEvents="none" userSelect={"none"} />
       </Box>
     </Box>
   );

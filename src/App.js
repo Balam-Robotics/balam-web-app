@@ -9,7 +9,7 @@ import History from "./pages/History";
 import Home from "./pages/home/Home";
 import PageNotFound from "./pages/PageNotFound";
 import Team from "./pages/Team";
-import Raffle from "./pages/Raffle";
+import Raffle from "./pages/Raffle/Raffle";
 
 function App() {
   const { toggleColorMode } = useColorMode();

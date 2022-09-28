@@ -63,7 +63,7 @@
 
 @keyframes box-logo-balam {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -89,5 +89,6 @@
 
 .inactive:hover {
   color: rgb(101, 207, 229);
-  transition: 0.3s;
+  transition: 0.2s;
+  cursor: pointer;
 }

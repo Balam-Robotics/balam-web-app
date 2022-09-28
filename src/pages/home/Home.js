@@ -6,7 +6,7 @@ import "./Home.css";
 export default function Home() {
   return (
     <>
-      <Box className="grid-container">
+      <Box className="header-container">
         <Box className="header">
           <Box>
             <Text className="header-heading">Balam 3257</Text>
@@ -21,11 +21,10 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
-      <Box>
-        <Text className="aboutus-text">
-          Balam 3527 es un equipo de robótica del Tec de Monterrey conformado
-          por jóvenes que buscan educarse en áreas de STEM.
-        </Text>
+      <Box className="grid-container">
+        <Box className="main-body">
+          <Text className="question-subtitle">Quienes somos?</Text>
+        </Box>
       </Box>
     </>
   );

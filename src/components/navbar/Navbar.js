@@ -84,7 +84,7 @@ export default function Navbar() {
         )}
       </Box>
 
-      {width < 1080 ? <NavbarMobile /> : <NavbarDesktop />}
+      {width < 1110 ? <NavbarMobile /> : <NavbarDesktop />}
     </>
   );
 }

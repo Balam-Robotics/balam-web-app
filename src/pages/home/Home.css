@@ -1,5 +1,4 @@
-.grid-container {
-  display: grid;
+.header-container {
   padding-top: 15px;
   background-color: #242c3c;
 }
@@ -39,4 +38,9 @@
   text-align: center;
   padding-right: clamp(1.5rem, 2.5vw, 5rem);
   padding-left: clamp(1.5rem, 2.5vw, 5rem);
+}
+
+/* =============== */
+
+.question-subtitle {
 }

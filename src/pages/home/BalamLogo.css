@@ -22,5 +22,11 @@
 }
 
 .container-gear {
-  animation: spin 18s infinite linear;
+  animation: spin-balam-logo-gear 30s linear infinite;
+}
+
+@keyframes spin-balam-logo-gear {
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -44,7 +44,7 @@ export default function NavbarDesktopNew() {
         <HStack spacing="15px">
           <Link to={"/"}>
             <Box width="55px">
-              <Image src={ITESMLogo} />
+              <Image src={ITESMLogo} pointerEvents="none" userSelect={"none"} />
             </Box>
           </Link>
           <Link to={"/"}>
@@ -53,7 +53,11 @@ export default function NavbarDesktopNew() {
                 <IoSettingsSharp fontSize="60px" />
               </Box>
               <Box width="150px">
-                <Image src={NavbarLogoBalam} />
+                <Image
+                  src={NavbarLogoBalam}
+                  pointerEvents="none"
+                  userSelect={"none"}
+                />
               </Box>
             </HStack>
           </Link>

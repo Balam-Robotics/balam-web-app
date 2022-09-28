@@ -58,7 +58,11 @@ export default function NavbarMobile() {
           <HStack spacing="15px">
             <Link to={"/"}>
               <Box width="35px">
-                <Image src={ITESMLogo} />
+                <Image
+                  src={ITESMLogo}
+                  pointerEvents="none"
+                  userSelect={"none"}
+                />
               </Box>
             </Link>
             <Link to={"/"}>
@@ -67,7 +71,11 @@ export default function NavbarMobile() {
                   <IoSettingsSharp fontSize="42px" />
                 </Box>
                 <Box width="120px">
-                  <Image src={NavbarLogoBalam} />
+                  <Image
+                    src={NavbarLogoBalam}
+                    pointerEvents="none"
+                    userSelect={"none"}
+                  />
                 </Box>
               </HStack>
             </Link>
