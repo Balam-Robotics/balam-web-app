@@ -87,7 +87,11 @@
 
 /* RAFFLE TABLE */
 .box-raffle-table {
-  width: clamp(300px, 30vw, 600px);
+  width: clamp(300px, 60vw, 1200px);
+}
+
+.datasheet {
+  margin-top: 25px;
 }
 
 /* TICKET CHECK */
