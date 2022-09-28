@@ -86,12 +86,18 @@
 }
 
 /* RAFFLE TABLE */
-.box-raffle-table {
-  width: clamp(300px, 60vw, 1200px);
+
+.box-raffle-table-header {
+  display: flex;
+  align-items: center;
+  width: clamp(300px, 60vw, 550px);
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.datasheet {
-  margin-top: 25px;
+.box-input {
+  width: clamp(180px, 20vw, 250px);
 }
 
 /* TICKET CHECK */

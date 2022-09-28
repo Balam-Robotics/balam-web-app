@@ -4,7 +4,8 @@ import iPadAir from "../../../src/assets/img/Raffle/iPadAir.png";
 import AirPods from "../../../src/assets/img/Raffle/AirPods3.png";
 import Bose from "../../../src/assets/img/Raffle/Bose.png";
 import Echo from "../../../src/assets/img/Raffle/Echo.png";
-import Placeholder from "../../../src/assets/img/Raffle/placeholder.png";
+import Polaroid from "../../../src/assets/img/Raffle/Polaroid.png";
+
 import "./Raffle.css";
 
 export default function PrizesGrid() {
@@ -32,11 +33,9 @@ export default function PrizesGrid() {
         </Box>
         <Box className="box-prizes-card">
           <VStack>
-            <Image src={Placeholder} className="img-prize" />
-            <Text className="text-prize-title">Cámara polaroid</Text>
-            <Text className="text-prize-subtitle">
-              (Falta infromación del modelo)
-            </Text>
+            <Image src={Polaroid} className="img-prize" />
+            <Text className="text-prize-title">Fujifilm Instax Mini 11</Text>
+            <Text className="text-prize-subtitle">(Cámara instantánea)</Text>
           </VStack>
         </Box>
         <Box className="box-prizes-card">
@@ -49,10 +48,8 @@ export default function PrizesGrid() {
         <Box className="box-prizes-card">
           <VStack>
             <Image src={Echo} className="img-prize" />
-            <Text className="text-prize-title">Echo dot</Text>
-            <Text className="text-prize-subtitle">
-              (Falta infromación del modelo)
-            </Text>
+            <Text className="text-prize-title">Echo dot Alexa</Text>
+            <Text className="text-prize-subtitle">(3ra Generación)</Text>
           </VStack>
         </Box>
       </Box>
