@@ -2,7 +2,7 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react";
 import "./Raffle.css";
 import Header from "./Header";
 import PrizesGrid from "./PrizesGrid";
-import Table from "./Table";
+import TableView from "./TableView";
 import TicketCheck from "./TicketCheck";
 
 export default function Raffle() {
@@ -20,7 +20,7 @@ export default function Raffle() {
             <PrizesGrid />
           </TabPanel>
           <TabPanel>
-            <Table />
+            <TableView />
           </TabPanel>
           <TabPanel>
             <TicketCheck />
