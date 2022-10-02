@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/balam-web-app/static/css/main.1cc217f2.css",
-    "main.js": "/balam-web-app/static/js/main.35b847c8.js",
+    "main.js": "/balam-web-app/static/js/main.bef0ad25.js",
     "static/media/movie.mp4": "/balam-web-app/static/media/movie.22238089006a55f768dc.mp4",
     "static/media/BalamShield.svg": "/balam-web-app/static/media/BalamShield.89558e1c02375452359ba7930585ec8f.svg",
     "static/media/Echo.png": "/balam-web-app/static/media/Echo.afe4f370a2cf6a6e7bfe.png",
@@ -15,10 +15,10 @@
     "static/media/NavbarGear.svg": "/balam-web-app/static/media/NavbarGear.fc2866357a7a701a9588bdc03d83aed6.svg",
     "index.html": "/balam-web-app/index.html",
     "main.1cc217f2.css.map": "/balam-web-app/static/css/main.1cc217f2.css.map",
-    "main.35b847c8.js.map": "/balam-web-app/static/js/main.35b847c8.js.map"
+    "main.bef0ad25.js.map": "/balam-web-app/static/js/main.bef0ad25.js.map"
   },
   "entrypoints": [
     "static/css/main.1cc217f2.css",
-    "static/js/main.35b847c8.js"
+    "static/js/main.bef0ad25.js"
   ]
 }
