@@ -11,6 +11,7 @@ import {
   HStack,
   Button,
   LightMode,
+  Text,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import NavbarDesktop from "./NavbarDesktop";
@@ -46,26 +47,28 @@ export default function Navbar() {
     <>
       <Box>
         {isVisible ? (
-          <Alert status="success" variant="solid">
+          <Alert status="success" variant="solid" icon>
             <Flex
               alignItems="center"
               width="100%"
               justifyContent="space-between"
             >
               <HStack>
-                <AlertIcon />
+                ``
                 <AlertDescription>
-                  ¡Participa y prueba tu suerte en la rifa Balam 2022! Hazte de
-                  lo último en tecnología y ganate in iPad Air, unos Airpods,
-                  una cámara y más.
+                  <Text>
+                    ¡Participa y prueba tu suerte en la rifa Balam 2022! 🤞
+                    Hazte de lo último en tecnología y ganate in iPad Air, unos
+                    Airpods, una cámara y más. ‎
+                    <NavLink to={"/raffle"} onClick={onClose}>
+                      <LightMode>
+                        <Button colorScheme="blue" variant="link" size="sm">
+                          Ver más
+                        </Button>
+                      </LightMode>
+                    </NavLink>
+                  </Text>
                 </AlertDescription>
-                <NavLink to={"/raffle"} onClick={onClose}>
-                  <LightMode>
-                    <Button colorScheme="blue" variant="link" size="sm">
-                      Ver más
-                    </Button>
-                  </LightMode>
-                </NavLink>
               </HStack>
               <HStack>
                 <IconButton

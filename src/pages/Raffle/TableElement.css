@@ -1,0 +1,16 @@
+.avaliable {
+  width: 30px;
+  height: 30px;
+  border-width: 2.5px;
+  border-radius: 5px;
+  border-color: #1e62aa;
+  /* border-color: #646b7b; */
+}
+
+.bought {
+  width: 30px;
+  height: 30px;
+  border-width: 3px;
+  border-radius: 5px;
+  background-color: #30d15e;
+}

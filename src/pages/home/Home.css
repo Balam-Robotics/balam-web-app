@@ -23,7 +23,7 @@
 }
 
 .space-band {
-  height: 12vh;
+  height: 4.5vh;
 }
 
 .header {
@@ -34,7 +34,7 @@
 
 .header-heading {
   font-family: co-text;
-  font-size: clamp(30px, 35vw, 70px);
+  font-size: clamp(30px, 40vw, 60px);
   font-weight: 800;
   text-align: center;
 }

@@ -75,12 +75,12 @@ export default function NavbarDesktopNew() {
           >
             Eventos
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to={"/donations"}
             className={({ isActive }) => (isActive ? "active" : "inactive")}
           >
             Donaciones
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to={"/contact"}
             className={({ isActive }) => (isActive ? "active" : "inactive")}

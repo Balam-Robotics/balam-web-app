@@ -1,14 +1,17 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import BalamLogo from "./BalamLogo";
 import Movie from "../../assets/img/Home/movie.mp4";
 import "./Home.css";
+import { BrowserView, MobileView } from "react-device-detect";
+import { NavLink } from "react-router-dom";
+import { BsInstagram } from "react-icons/bs";
 
 export default function Home() {
   return (
     <>
       <Box className="header-container">
-        <Box className="header">
+        <BrowserView>
           <video
             src={Movie}
             autoPlay
@@ -19,6 +22,34 @@ export default function Home() {
           ></video>
           <Box className="bg-overlay"></Box>
           <Box className="space-band" />
+        </BrowserView>
+
+        <Box className="header">
+          <NavLink to={"/raffle"}>
+            <BrowserView>
+              <Button
+                icon={<BsInstagram />}
+                colorScheme="purple"
+                variant="solid"
+                size="lg"
+                marginBottom="50px"
+              >
+                🏆 ¡Rifa Balam 2022! 🏆
+              </Button>
+            </BrowserView>
+            <MobileView>
+              <Button
+                icon={<BsInstagram />}
+                colorScheme="purple"
+                variant="solid"
+                size="lg"
+                marginTop="20px"
+                marginBottom="30px"
+              >
+                🏆 ¡Rifa Balam 2022! 🏆
+              </Button>
+            </MobileView>
+          </NavLink>
           <Box className="upper-index">
             <Text className="header-heading">Balam 3257</Text>
           </Box>

@@ -15,6 +15,15 @@
   /* background-color: cyan; */
 }
 
+.table-legend {
+  padding-top: 50px;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+}
+
 /* SECOND CONTAINER */
 .second-grid-container {
   display: grid;
@@ -55,7 +64,7 @@
   text-align: center;
   font-size: 16px;
   margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -96,19 +105,18 @@
 }
 
 .table-box {
-  width: clamp(300px, 80vw, 1250px);
+  width: clamp(300px, 90vw, 1700px);
+  overflow: auto;
   margin-bottom: 30px;
   border-width: 5px;
   border-radius: 8px;
   border-color: #2a3346;
-  overscroll-behavior: contain;
 }
 
 .headcol {
-  position: absolute;
 }
 
 /* TICKET CHECK */
 .box-ticket-check {
-  width: clamp(300px, 30vw, 600px);
+  width: clamp(300px, 80vw, 1200px);
 }

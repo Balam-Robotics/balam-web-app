@@ -13,7 +13,7 @@ export default function Raffle() {
         <TabList>
           <Tab>Inicio</Tab>
           <Tab>Tabla</Tab>
-          <Tab>Consulta tu boleto</Tab>
+          {/* <Tab>Consulta tu boleto</Tab> */}
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -22,9 +22,9 @@ export default function Raffle() {
           <TabPanel>
             <TableView />
           </TabPanel>
-          <TabPanel>
+          {/* <TabPanel>
             <TicketCheck />
-          </TabPanel>
+          </TabPanel> */}
         </TabPanels>
       </Tabs>
     </>

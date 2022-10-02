@@ -1,44 +1,113 @@
 import {
   Box,
   Button,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Input,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
-  Tfoot,
   Th,
   Thead,
   Tr,
   Table,
-  Center,
   Text,
   VStack,
+  HStack,
+  Badge,
+  useToast,
 } from "@chakra-ui/react";
 import "react-data-grid/lib/styles.css";
 import { IoRefresh } from "react-icons/io5";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Raffle.css";
+import TableElementBought from "./TableElementBought";
+import TableElementAvaliable from "./TableElementAvaliable";
+import dummyJSON from "./DummyData.json";
 
 export default function TableView() {
+  const url =
+    "https://sheet.best/api/sheets/29c1b8ce-eb02-4ed5-9c18-0eaf19a5dbc3";
+  const url2 = "https://jsonplaceholder.typicode.com/todos";
+  const url3 =
+    "https://api.steinhq.com/v1/storages/6338ff24eced9b09e99d8202/table";
+
+  const [fetchedData, setFetechedData] = useState(dummyJSON);
+  const [loading, setLoading] = useState(false);
+  const [errorOccured, setErrorOccured] = useState(false);
+
+  const toast = useToast();
+
+  const showToast = () => {
+    toast({
+      title: "¡Datos actualizados!",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+      position: "top",
+    });
+  };
+
+  const fetchData = () => {
+    setLoading(true);
+    setErrorOccured(false);
+
+    fetch(url3)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setLoading(false);
+        setFetechedData(data);
+        showToast();
+      })
+      .catch((error) => {
+        setErrorOccured(true);
+        setLoading(false);
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    // fetchData();
+  }, []);
+
   return (
     <>
       <VStack className="box-raffle-table-header">
+        <Text className="text-header-subtitle2">
+          Para consultar el estado de la tabla de la rifa con los datos más
+          recientes, presiona el botón de abajo.
+        </Text>
         <Button
           rightIcon={<IoRefresh />}
           colorScheme="teal"
           variant="outline"
-          isLoading={true}
-          loadingText="Actualizando datos"
+          loadingText="Obteniendo datos"
+          onClick={() => {
+            fetchData();
+          }}
+          isLoading={loading}
         >
           Recargar tabla
         </Button>
-        <Text className="text-header-subtitle2">
-          Aquí podrás consultar el estado de la tabla de la rifa.
-        </Text>
+        {!errorOccured ? (
+          <></>
+        ) : (
+          <Badge colorScheme="red">
+            <VStack>
+              <Text>Ocurrió un error, intenta más tarde.</Text>
+            </VStack>
+          </Badge>
+        )}
+        <HStack className="table-legend" spacing={8}>
+          <VStack>
+            <TableElementAvaliable />
+            <Text>Boletos disponibles:</Text>
+          </VStack>
+          <VStack>
+            <TableElementBought />
+            <Text>Boletos vendidos:</Text>
+          </VStack>
+        </HStack>
       </VStack>
       {/* TABLA */}
       <Box className="table-box">
@@ -46,92 +115,217 @@ export default function TableView() {
           <Table variant="striped" size="sm">
             <Thead>
               <Tr>
-                <Th isNumeric>-</Th>
-                <Th isNumeric>1</Th>
-                <Th isNumeric>2</Th>
-                <Th isNumeric>3</Th>
-                <Th isNumeric>4</Th>
-                <Th isNumeric>5</Th>
-                <Th isNumeric>6</Th>
-                <Th isNumeric>7</Th>
-                <Th isNumeric>8</Th>
-                <Th isNumeric>9</Th>
-                <Th isNumeric>10</Th>
-                <Th isNumeric>11</Th>
-                <Th isNumeric>12</Th>
-                <Th isNumeric>13</Th>
-                <Th isNumeric>14</Th>
-                <Th isNumeric>15</Th>
-                <Th isNumeric>16</Th>
-                <Th isNumeric>17</Th>
-                <Th isNumeric>18</Th>
-                <Th isNumeric>19</Th>
-                <Th isNumeric>20</Th>
-                <Th isNumeric>21</Th>
-                <Th isNumeric>22</Th>
-                <Th isNumeric>23</Th>
-                <Th isNumeric>24</Th>
-                <Th isNumeric>25</Th>
+                <Th>-</Th>
+                <Th>A</Th>
+                <Th>B</Th>
+                <Th>C</Th>
+                <Th>D</Th>
+                <Th>E</Th>
+                <Th>F</Th>
+                <Th>G</Th>
+                <Th>H</Th>
+                <Th>I</Th>
+                <Th>J</Th>
+                <Th>K</Th>
+                <Th>L</Th>
+                <Th>M</Th>
+                <Th>N</Th>
+                <Th>O</Th>
+                <Th>P</Th>
+                <Th>Q</Th>
+                <Th>R</Th>
+                <Th>S</Th>
+                <Th>T</Th>
+                <Th>U</Th>
+                <Th>V</Th>
+                <Th>W</Th>
+                <Th>X</Th>
+                <Th>Y</Th>
               </Tr>
             </Thead>
             <Tbody>
-              <Tr>
-                <Td className="headcol">A</Td>
-              </Tr>
-              <Tr>
-                <Td>B</Td>
-              </Tr>
-              <Tr>
-                <Td>C</Td>
-              </Tr>
-              <Tr>
-                <Td>D</Td>
-              </Tr>
-              <Tr>
-                <Td>E</Td>
-              </Tr>
-              <Tr>
-                <Td>F</Td>
-              </Tr>
-              <Tr>
-                <Td>G</Td>
-              </Tr>
-              <Tr>
-                <Td>H</Td>
-              </Tr>
-              <Tr>
-                <Td>I</Td>
-              </Tr>
-              <Tr>
-                <Td>J</Td>
-              </Tr>
-              <Tr>
-                <Td>K</Td>
-              </Tr>
-              <Tr>
-                <Td>L</Td>
-              </Tr>
-              <Tr>
-                <Td>M</Td>
-              </Tr>
-              <Tr>
-                <Td>N</Td>
-              </Tr>
-              <Tr>
-                <Td>O</Td>
-              </Tr>
-              <Tr>
-                <Td>P</Td>
-              </Tr>
-              <Tr>
-                <Td>Q</Td>
-              </Tr>
-              <Tr>
-                <Td>R</Td>
-              </Tr>
-              <Tr>
-                <Td>S</Td>
-              </Tr>
+              {fetchedData.map((item, i) => (
+                <Tr key={i}>
+                  <Td>
+                    <Text>{item.Ñ}</Text>
+                  </Td>
+                  <Td>
+                    {item.A === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.B === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.C === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.D === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.E === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.F === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.G === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.H === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.I === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.J === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.K === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.L === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.M === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.N === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.O === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.P === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.Q === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.R === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.S === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.T === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.U === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.V === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.W === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.X === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                  <Td>
+                    {item.Y === "Z" ? (
+                      <TableElementAvaliable />
+                    ) : (
+                      <TableElementBought />
+                    )}
+                  </Td>
+                </Tr>
+              ))}
             </Tbody>
           </Table>
         </TableContainer>

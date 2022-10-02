@@ -140,7 +140,7 @@ export default function NavbarMobile() {
                 >
                   Eventos
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to={"/donations"}
                   className={({ isActive }) =>
                     isActive ? "active" : "inactive"
@@ -148,7 +148,7 @@ export default function NavbarMobile() {
                   onClick={onClose}
                 >
                   Donaciones
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                   to={"/contact"}
                   className={({ isActive }) =>
