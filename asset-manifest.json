@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/balam-web-app/static/css/main.1cc217f2.css",
+    "main.js": "/balam-web-app/static/js/main.35b847c8.js",
+    "static/media/movie.mp4": "/balam-web-app/static/media/movie.22238089006a55f768dc.mp4",
+    "static/media/BalamShield.svg": "/balam-web-app/static/media/BalamShield.89558e1c02375452359ba7930585ec8f.svg",
+    "static/media/Echo.png": "/balam-web-app/static/media/Echo.afe4f370a2cf6a6e7bfe.png",
+    "static/media/Polaroid.png": "/balam-web-app/static/media/Polaroid.42ded1ba2c83bb78bd35.png",
+    "static/media/AirPods3.png": "/balam-web-app/static/media/AirPods3.80bc16f417f9c82b5838.png",
+    "static/media/iPadAir.png": "/balam-web-app/static/media/iPadAir.3a1e6df3f59186fd331f.png",
+    "static/media/Bose.png": "/balam-web-app/static/media/Bose.0fa004299623c95214ee.png",
+    "static/media/BalamGear.svg": "/balam-web-app/static/media/BalamGear.1ad82229a94fc05db52b2657b9b5c44e.svg",
+    "static/media/NavbarBalam.svg": "/balam-web-app/static/media/NavbarBalam.60e84219285f6d5ccc3914c5562fa307.svg",
+    "static/media/ITESM.svg": "/balam-web-app/static/media/ITESM.0649505e720b4cf5f00fc94c3145d220.svg",
+    "static/media/NavbarGear.svg": "/balam-web-app/static/media/NavbarGear.fc2866357a7a701a9588bdc03d83aed6.svg",
+    "index.html": "/balam-web-app/index.html",
+    "main.1cc217f2.css.map": "/balam-web-app/static/css/main.1cc217f2.css.map",
+    "main.35b847c8.js.map": "/balam-web-app/static/js/main.35b847c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cc217f2.css",
+    "static/js/main.35b847c8.js"
+  ]
+}
